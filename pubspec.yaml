@@ -13,6 +13,10 @@ dependencies:
     sdk: flutter
 
   # Utils
+  logger: ^2.4.0
+  http: ^1.2.2
+  intl: ^0.19.0
+  url_launcher: ^6.3.0
 
   # Icons
   iconsax: ^0.0.8
