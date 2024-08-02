@@ -1,4 +1,5 @@
 import 'package:anniv_46_admin_app/bindings/general_bindings.dart';
+import 'package:anniv_46_admin_app/features/authentication/screens/login/login.dart';
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';
 import 'package:anniv_46_admin_app/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -12,16 +13,17 @@ class App extends StatelessWidget {
     return GetMaterialApp(
       themeMode: ThemeMode.system,
       theme: MainAppTheme.lightTheme,
-      initialBinding: GeneralBindings(),
       darkTheme: MainAppTheme.darkTheme,
-      home: const Scaffold(
-        backgroundColor: MainColors.primary,
-        body: Center(
-          child: CircularProgressIndicator(
-            color: Colors.white,
-          ),
-        ),
-      ),
+      initialBinding: GeneralBindings(),
+      home: const LoginScreen(),
+      // home: const Scaffold(
+      //   backgroundColor: MainColors.primary,
+      //   body: Center(
+      //     child: CircularProgressIndicator(
+      //       color: Colors.white,
+      //     ),
+      //   ),
+      // ),
     );
   }
 }
