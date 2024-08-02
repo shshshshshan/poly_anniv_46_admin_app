@@ -9,6 +9,6 @@ Future<void> main() async {
 
   await GetStorage.init();
 
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(const App());
 }
