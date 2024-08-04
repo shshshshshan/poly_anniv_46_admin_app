@@ -7,6 +7,10 @@ class MainTexts {
   static const String pendingPayments = 'Pending Payments';
   static const String verifiedPayments = 'Verified Payments';
 
+  // -- REGISTRANTS Texts
+  static const String registrantsAppbarTitle = 'Event Registrants';
+  static const String registrantsSearchBarLabel = 'Search a registrant...';
+
   // -- LOGIN Heading Texts
   static const String loginTitle = 'Anniversary Pre-Registration App';
   static const String loginSubTitle =
