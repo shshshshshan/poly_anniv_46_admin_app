@@ -2,7 +2,6 @@ import 'package:anniv_46_admin_app/common/widgets/loaders/loaders.dart';
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';
 import 'package:anniv_46_admin_app/utils/constants/enums.dart';
 import 'package:anniv_46_admin_app/utils/constants/sizes.dart';
-import 'package:anniv_46_admin_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,7 +35,8 @@ class RegistrantCard extends StatelessWidget {
               Expanded(
                   flex: 4,
                   child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: MainSizes.sm),
+                      padding:
+                          const EdgeInsets.symmetric(vertical: MainSizes.sm),
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           crossAxisAlignment: CrossAxisAlignment.start,
