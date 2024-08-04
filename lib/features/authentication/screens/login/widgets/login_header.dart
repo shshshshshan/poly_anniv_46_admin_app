@@ -14,12 +14,15 @@ class MainLoginHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image(
-          height: 150,
-          image: AssetImage(
-              dark ? MainImages.darkAppLogo : MainImages.lightAppLogo),
+        Align(
+          alignment: Alignment.center,
+          child: Image(
+            height: 200,
+            image: AssetImage(
+                dark ? MainImages.darkAppLogo : MainImages.lightAppLogo),
+          ),
         ),
-        const SizedBox(height: MainSizes.sm),
+        const SizedBox(height: MainSizes.lg),
         Text(MainTexts.loginTitle,
             style: Theme.of(context).textTheme.headlineMedium),
         const SizedBox(height: MainSizes.sm),

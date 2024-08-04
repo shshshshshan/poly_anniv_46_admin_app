@@ -1,3 +1,4 @@
+import 'package:anniv_46_admin_app/navigation_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -15,5 +16,7 @@ class LoginController extends GetxController {
 
   final localStorage = GetStorage();
 
-  Future<void> login() async {}
+  Future<void> login() async {
+    Get.offAll(() => const NavigationMenu());
+  }
 }
