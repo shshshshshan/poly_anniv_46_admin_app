@@ -1,4 +1,5 @@
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';
+import 'package:anniv_46_admin_app/utils/device/device_utility.dart';
 import 'package:anniv_46_admin_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -14,6 +15,10 @@ class MainLoaders {
         elevation: 0,
         duration: const Duration(seconds: 3),
         backgroundColor: Colors.transparent,
+        behavior: SnackBarBehavior.floating,
+        margin: EdgeInsets.only(
+            bottom: (MainDeviceUtils.getScreenHeight() -
+                MainDeviceUtils.getAppBarHeight() * 3)),
         content: Container(
           padding: const EdgeInsets.all(12),
           margin: const EdgeInsets.symmetric(horizontal: 30),
