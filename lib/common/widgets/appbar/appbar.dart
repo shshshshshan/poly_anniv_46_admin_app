@@ -15,10 +15,11 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       this.leadingIcon,
       this.actions,
       this.leadingOnPressed,
-      this.systemOverlayStyle});
+      this.systemOverlayStyle, this.elevation});
 
   final Widget? title;
   final bool showBackArrow;
+  final double? elevation;
   final IconData? leadingIcon;
   final List<Widget>? actions;
   final SystemUiOverlayStyle? systemOverlayStyle;
@@ -33,6 +34,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       child: AppBar(
         systemOverlayStyle: systemOverlayStyle,
         automaticallyImplyLeading: false,
+        elevation: elevation,
         leading: showBackArrow
             ? IconButton(
                 onPressed: () => Get.back(),
