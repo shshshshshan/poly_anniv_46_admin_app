@@ -17,8 +17,8 @@ class MainDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = HelperFunctions.isDarkMode(context);
-    final refreshIndicatorController = Get.put(RefreshIndicatorController());
-    final scrollController = Get.put(MainScrollController());
+    final refreshIndicatorController = Get.put(DashboardRefreshIndicatorController());
+    final scrollController = Get.put(DashboardScrollController());
 
     return Scaffold(
       body: LiquidPullRefresh(
@@ -41,10 +41,7 @@ class MainDashboard extends StatelessWidget {
                   child: Column(
                     children: [
                       // Header
-                      const Padding(
-                        padding: EdgeInsets.only(right: MainSizes.md),
-                        child: MainHomeAppBar(),
-                      ),
+                      const MainHomeAppBar(),
 
                       Divider(
                           color: MainColors.black.withOpacity(0.1),
