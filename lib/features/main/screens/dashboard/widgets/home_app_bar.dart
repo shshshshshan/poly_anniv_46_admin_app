@@ -15,8 +15,8 @@ class MainHomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final refreshIndicatorController = Get.put(RefreshIndicatorController());
-    final scrollController = Get.put(MainScrollController());
+    final refreshIndicatorController = Get.put(DashboardRefreshIndicatorController());
+    final scrollController = Get.put(DashboardScrollController());
 
     return MainAppBar(
       title: Column(
@@ -40,8 +40,7 @@ class MainHomeAppBar extends StatelessWidget {
                 icon: const Icon(Iconsax.refresh, color: MainColors.white),
                 onPressed: () {
                   scrollController.controller.animateTo(
-                      scrollController.controller.position.minScrollExtent -
-                          300,
+                      scrollController.controller.position.minScrollExtent - 300,
                       duration: const Duration(milliseconds: 500),
                       curve: Curves.linear);
                   refreshIndicatorController.key.currentState?.show();
