@@ -20,6 +20,8 @@ dependencies:
   get_storage: ^2.1.1
   connectivity_plus: ^5.0.2
   lottie: ^3.1.2
+  animated_digit: ^3.2.3
+  liquid_pull_refresh: ^1.0.6
 
   # Icons
   iconsax: ^0.0.8
