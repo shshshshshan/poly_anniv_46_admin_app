@@ -4,19 +4,19 @@ class MainColors {
   MainColors._();
 
   // App Basic Colors
-  static const Color primary = Color(0xFF4B68FF);
-  static const Color secondary = Color(0xFFFFE24B);
-  static const Color accent = Color(0xFFB0C7FF);
+  static const Color primary = Color(0xFF4DAFFF);
+  static const Color secondary = Color(0xFFFFF59E);
+  static const Color accent = Color(0xFFFFB13D);
 
   // Gradient Colors
   static const Gradient linearGradient = LinearGradient(
-    begin: Alignment(0.0, 0.0),
-    end: Alignment(0.707, -0.707),
-    colors: [
-      Color(0xFFFF9A9E),
-      Color(0xFFFAD0C4),
-      Color(0xFFFAD0C4),
-  ]);
+      begin: Alignment(0.0, 0.0),
+      end: Alignment(0.707, -0.707),
+      colors: [
+        Color(0xFFFF9A9E),
+        Color(0xFFFAD0C4),
+        Color(0xFFFAD0C4),
+      ]);
 
   // Text Colors
   static const textPrimary = Color(0xFF333333);
