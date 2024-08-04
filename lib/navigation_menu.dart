@@ -55,15 +55,10 @@ class NavigationController extends GetxController {
 
   final screens = [
     NavigationDestinationItem(
-        name: '', widget: const MainDashboard(), iconData: Iconsax.home),
+        widget: const MainDashboard(), iconData: Iconsax.home),
     NavigationDestinationItem(
-        name: '', widget: const MainRegistrants(), iconData: Iconsax.user),
+        widget: const MainRegistrants(), iconData: Iconsax.user),
     NavigationDestinationItem(
-        name: '',
-        widget: const Scaffold(backgroundColor: Colors.blue),
-        iconData: Iconsax.note_favorite),
-    NavigationDestinationItem(
-        name: '',
         widget: const Scaffold(backgroundColor: Colors.green),
         iconData: Iconsax.setting_2),
   ];
