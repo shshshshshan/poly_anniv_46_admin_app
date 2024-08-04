@@ -1,17 +1,19 @@
 class MainTexts {
   // -- GLOBAL Texts
   static const String copyRight =
-      "©2023-2024 Visca Polyphonics. All Rights Reserved.";
+      "©2024-2025 Visca Polyphonics. All Rights Reserved.";
 
   // -- MAIN Texts
+  static const String pendingPayments = 'Pending Payments';
+  static const String verifiedPayments = 'Verified Payments';
 
   // -- LOGIN Heading Texts
-  static const String loginTitle = 'Welcome back';
+  static const String loginTitle = 'Anniversary Pre-Registration App';
   static const String loginSubTitle =
-      'Track and Monitor Member Attendance in One Click! - Login to Your Account to Get Started!';
+      'Efficiently Manage Your Pre-registration Payments and Track Attendees Seamlessly';
 
   // -- LOGIN Form Texts
-  static const String username = 'Username';
+  static const String username = 'Email';
   static const String password = 'Password';
   static const String rememberMe = 'Remember Me';
   static const String forgotPassword = 'Forgot Password?';
@@ -23,6 +25,11 @@ class MainTexts {
 
   static const String submit = 'Submit';
   static const String done = 'Done';
+
+  // -- APPBAR Text
+  static const String homeAppbarTitle =
+      'The ViSCA Polyphonics 46th Anniversary';
+  static const String homeAppbarSubtitle = 'Pre-registration Application';
 
   // -- DEVICE STORAGE Texts
 }
