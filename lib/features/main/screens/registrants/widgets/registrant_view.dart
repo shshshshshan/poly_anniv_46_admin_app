@@ -64,7 +64,7 @@ class RegistrantViewState extends State<RegistrantView> {
                     });
                   },
                   title: MainTexts.email,
-                  value: widget.registrant.name),
+                  value: widget.registrant.email),
               MainProfileMenu(
                   icon: Iconsax.copy,
                   onPressed: () {
@@ -77,7 +77,7 @@ class RegistrantViewState extends State<RegistrantView> {
                     });
                   },
                   title: MainTexts.nickName,
-                  value: widget.registrant.name),
+                  value: widget.registrant.nickname),
               MainProfileMenu(
                   icon: null,
                   title: MainTexts.gender,
@@ -86,7 +86,7 @@ class RegistrantViewState extends State<RegistrantView> {
               MainProfileMenu(
                   icon: null,
                   title: MainTexts.batch,
-                  value: widget.registrant.name),
+                  value: widget.registrant.batchYear),
               const SizedBox(height: MainSizes.sectionGap),
               const MainSectionHeading(
                   title: 'Payment Information', showActionButton: false),
@@ -94,7 +94,7 @@ class RegistrantViewState extends State<RegistrantView> {
               MainProfileMenu(
                   icon: null,
                   title: MainTexts.modePayment,
-                  value: widget.registrant.name),
+                  value: widget.registrant.modeOfPayment.name),
               MainProfileMenu(
                   icon: Iconsax.copy,
                   onPressed: () {
@@ -107,7 +107,7 @@ class RegistrantViewState extends State<RegistrantView> {
                     });
                   },
                   title: MainTexts.gcashName,
-                  value: widget.registrant.name),
+                  value: widget.registrant.gcashName),
               MainProfileMenu(
                   icon: Iconsax.copy,
                   onPressed: () {
@@ -120,11 +120,11 @@ class RegistrantViewState extends State<RegistrantView> {
                     });
                   },
                   title: MainTexts.gcashRefId,
-                  value: widget.registrant.name),
+                  value: widget.registrant.gcashRefId),
               MainProfileMenu(
                   icon: null,
                   title: MainTexts.partialPayment,
-                  value: widget.registrant.name),
+                  value: widget.registrant.isPartialPayment),
               MainProfileMenu(
                   onPressed: () => Get.to(() => PaymentStatusEdit(status: widget.registrant.paymentStatus)),
                   title: MainTexts.paymentStatus,
@@ -132,7 +132,7 @@ class RegistrantViewState extends State<RegistrantView> {
                   textColor: widget.registrant.paymentStatus.color),
               const SizedBox(height: MainSizes.sectionGap * 2),
               MainLabel(
-                  labelText: 'Register Time: ${DateTime.now().toLocal()}'),
+                  labelText: 'Register Time: ${widget.registrant.timestamp}'),
             ],
           ),
         ),
