@@ -51,4 +51,7 @@ class MainTexts {
   static const String homeAppbarSubtitle = 'Pre-registration Application';
 
   // -- DEVICE STORAGE Texts
+
+  // -- FIREBASE Texts
+  static const String userDoc = "Users";
 }
