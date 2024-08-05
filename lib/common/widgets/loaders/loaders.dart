@@ -63,7 +63,7 @@ class MainLoaders {
         icon: const Icon(Iconsax.warning_2, color: MainColors.white));
   }
 
-  static errorsnackbar({required title, message = '', duration = 3}) {
+  static errorSnackbar({required title, message = '', duration = 3}) {
     Get.snackbar(title, message,
         isDismissible: true,
         shouldIconPulse: true,
