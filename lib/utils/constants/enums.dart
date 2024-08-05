@@ -8,6 +8,10 @@ enum TextSizes { small, medium, large }
 enum Gender { male, female }
 
 extension GenderExtension on Gender {
+  String get titleName {
+    return ["Male", "Female"][index];
+  }
+
   Color get color {
     return [MainColors.primary, Colors.pink][index];
   }
