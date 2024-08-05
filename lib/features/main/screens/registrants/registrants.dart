@@ -3,6 +3,8 @@ import 'package:anniv_46_admin_app/common/widgets/custom_shapes/containers/searc
 import 'package:anniv_46_admin_app/common/widgets/tooltip/tooltip.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/registrants/main_scroll.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/registrants/refresh_indicator.dart';
+import 'package:anniv_46_admin_app/features/main/controllers/registrants/registrant_controller.dart';
+import 'package:anniv_46_admin_app/features/main/screens/registrants/widgets/registrant_card.dart';
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';
 import 'package:anniv_46_admin_app/utils/constants/sizes.dart';
 import 'package:anniv_46_admin_app/utils/constants/texts.dart';
@@ -19,6 +21,7 @@ class MainRegistrants extends StatelessWidget {
   Widget build(BuildContext context) {
     final refreshIndicatorController = Get.put(RegistrantsRefreshIndicatorController());
     final scrollController = Get.put(RegistrantsScrollController());
+    final registrantController = RegistrantController.instance;
     final dark = HelperFunctions.isDarkMode(context);
 
     return Scaffold(
@@ -60,6 +63,10 @@ class MainRegistrants extends StatelessWidget {
               ]),
 
               const SizedBox(height: MainSizes.sectionGap),
+
+              Column(
+                children: registrantController.registrants.map((registrant) => RegistrantCard(registrant: registrant)).toList(),
+              )
             ],
           ),
         ));
