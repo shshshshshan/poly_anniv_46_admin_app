@@ -1,6 +1,7 @@
 import 'package:anniv_46_admin_app/common/classes/navigation_destination_item.dart';
 import 'package:anniv_46_admin_app/features/main/screens/dashboard/dashboard.dart';
 import 'package:anniv_46_admin_app/features/main/screens/registrants/registrants.dart';
+import 'package:anniv_46_admin_app/features/personalization/screens/personalization.dart';
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';
 import 'package:anniv_46_admin_app/utils/constants/sizes.dart';
 import 'package:anniv_46_admin_app/utils/helpers/helper_functions.dart';
@@ -59,7 +60,7 @@ class NavigationController extends GetxController {
     NavigationDestinationItem(
         widget: const MainRegistrants(), iconData: Iconsax.user),
     NavigationDestinationItem(
-        widget: const Scaffold(backgroundColor: Colors.green),
+        widget: const PersonalizationScreen(),
         iconData: Iconsax.setting_2),
   ];
 

@@ -1,4 +1,4 @@
-import 'package:anniv_46_admin_app/common/classes/registrant.dart';
+import 'package:anniv_46_admin_app/features/main/models/registrants/registrant.dart';
 import 'package:anniv_46_admin_app/common/widgets/loaders/loaders.dart';
 import 'package:anniv_46_admin_app/features/main/screens/registrants/widgets/registrant_view.dart';
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';

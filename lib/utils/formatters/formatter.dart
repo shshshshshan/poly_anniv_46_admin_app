@@ -6,6 +6,11 @@ class MainFormatter {
     return DateFormat('MMMM d, y').format(date);
   }
 
+  static String formatDateTime(DateTime? dateTime) {
+    dateTime ??= DateTime.now();
+    return DateFormat('MMMM d, y h:mm:ss a').format(dateTime);
+  }
+
   static String formatCurrency(double amount) {
     return NumberFormat.currency(locale: 'en-PH', symbol: '₱').format(amount);
   }
