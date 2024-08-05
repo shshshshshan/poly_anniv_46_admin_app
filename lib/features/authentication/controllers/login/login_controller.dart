@@ -68,6 +68,11 @@ class LoginController extends GetxController {
       final userCredentials =
           await AuthenticationRepository.instance.signInWithGoogle();
 
+      if (userCredentials == null) {
+        MainFullScreenLoader.stopLoading();
+        return;
+      }
+
       await userController.saveUserRecord(userCredentials);
 
       MainFullScreenLoaderGif.openLoadingDialog('Success!',

@@ -40,11 +40,16 @@ class AuthenticationRepository extends GetxController {
   Future<UserCredential?> signInWithGoogle() async {
     try {
       final userAccount = await GoogleSignIn().signIn();
-      final googleAuth = await userAccount?.authentication;
+
+      if (userAccount == null) {
+        return null;
+      }
+
+      final googleAuth = await userAccount.authentication;
 
       final credentials = GoogleAuthProvider.credential(
-        accessToken: googleAuth?.accessToken,
-        idToken: googleAuth?.idToken
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken
       );
 
       return await auth.signInWithCredential(credentials);
