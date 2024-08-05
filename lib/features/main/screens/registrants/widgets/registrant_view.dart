@@ -5,7 +5,6 @@ import 'package:anniv_46_admin_app/common/widgets/loaders/loaders.dart';
 import 'package:anniv_46_admin_app/common/widgets/profile/profile_menu.dart';
 import 'package:anniv_46_admin_app/common/widgets/texts/section_heading.dart';
 import 'package:anniv_46_admin_app/features/main/screens/registrants/widgets/payment_status_edit.dart';
-import 'package:anniv_46_admin_app/utils/constants/colors.dart';
 import 'package:anniv_46_admin_app/utils/constants/enums.dart';
 import 'package:anniv_46_admin_app/utils/constants/sizes.dart';
 import 'package:anniv_46_admin_app/utils/constants/texts.dart';
