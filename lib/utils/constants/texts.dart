@@ -2,6 +2,20 @@ class MainTexts {
   // -- GLOBAL Texts
   static const String copyRight =
       "©2024-2025 Visca Polyphonics. All Rights Reserved.";
+  static const String copySuccessTitle = 'Copied!';
+  static const String copySuccessSubtitle = 'Successfully copied to clipboard';
+
+  static const String fullName = 'Full Name';
+  static const String email = 'Email Address';
+  static const String nickName = 'Nickname';
+  static const String gender = 'Gender';
+  static const String batch = 'Batch';
+
+  static const String modePayment = 'Mode of Payment';
+  static const String gcashName = 'G-Cash Name';
+  static const String gcashRefId = 'G-Cash Ref ID';
+  static const String partialPayment = 'Partial Payment';
+  static const String paymentStatus = 'Payment Status';
 
   // -- MAIN Texts
   static const String pendingPayments = 'Pending Payments';
@@ -10,6 +24,7 @@ class MainTexts {
   // -- REGISTRANTS Texts
   static const String registrantsAppbarTitle = 'Event Registrants';
   static const String registrantsSearchBarLabel = 'Search a registrant...';
+  static const String registrantsViewTitle = 'Registrant Information';
 
   // -- LOGIN Heading Texts
   static const String loginTitle = 'Anniversary Pre-Registration App';
