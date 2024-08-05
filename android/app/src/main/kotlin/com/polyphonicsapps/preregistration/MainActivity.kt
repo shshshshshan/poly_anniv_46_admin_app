@@ -1,4 +1,4 @@
-package com.example.anniv_46_admin_app
+package com.polyphonicsapps.preregistration
 
 import io.flutter.embedding.android.FlutterActivity
 
