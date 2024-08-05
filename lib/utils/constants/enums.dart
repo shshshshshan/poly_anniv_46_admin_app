@@ -5,7 +5,20 @@ import 'package:flutter/material.dart';
 
 enum TextSizes { small, medium, large }
 
-enum Gender { male, female }
+enum Gender {
+  male, female;
+
+  static Gender fromString(String gender) {
+
+    final selectedGender = {
+      'male': Gender.male,
+      'female': Gender.female
+    }[gender];
+
+    if (selectedGender == null) throw 'Got unexpected gender.';
+    return selectedGender;
+  }
+}
 
 extension GenderExtension on Gender {
   String get titleName {
@@ -21,7 +34,23 @@ extension GenderExtension on Gender {
   }
 }
 
-enum PaymentStatus { pending, successful, failed; }
+enum PaymentStatus {
+  pending,
+  successful,
+  failed;
+
+  static PaymentStatus fromString(String status) {
+
+    final paymentStatus = {
+      'pending': PaymentStatus.pending,
+      'successful': PaymentStatus.successful,
+      'failed': PaymentStatus.failed
+    }[status];
+
+    if (paymentStatus == null) throw 'Got unexpected status.';
+    return paymentStatus;
+  }
+}
 
 extension PaymentStatusExtension on PaymentStatus {
   String get name {
@@ -30,5 +59,27 @@ extension PaymentStatusExtension on PaymentStatus {
 
   Color get color {
     return [MainColors.accent, Colors.green, Colors.red][index];
+  }
+}
+
+enum ModeOfPayment {
+  gcash,
+  uponArrival;
+
+  static ModeOfPayment fromString(String mode) {
+
+    final modeOfPayment = {
+      'g-cash': ModeOfPayment.gcash,
+      'pay upon arrival': ModeOfPayment.uponArrival
+    }[mode];
+
+    if (modeOfPayment == null) throw 'Got unexpected mode of payment.';
+    return modeOfPayment;
+  }
+}
+
+extension ModeOfPaymentExtension on ModeOfPayment {
+  String get name {
+    return ["G-Cash", "Pay Upon Arrival"][index];
   }
 }
