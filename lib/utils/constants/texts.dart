@@ -6,7 +6,7 @@ class MainTexts {
   static const String copySuccessSubtitle = 'Successfully copied to clipboard';
 
   static const String fullName = 'Full Name';
-  static const String email = 'Email Address';
+  static const String email = 'Email';
   static const String nickName = 'Nickname';
   static const String gender = 'Gender';
   static const String batch = 'Batch';
@@ -50,7 +50,11 @@ class MainTexts {
       'The ViSCA Polyphonics 46th Anniversary';
   static const String homeAppbarSubtitle = 'Pre-registration Application';
 
-  // -- DEVICE STORAGE Texts
+  // -- DOTENV Texts
+  static const String dotenvFile = '.env';
+  static const String registrantSpreadsheetId = 'REGISTRANTS_SPREADSHEET_ID';
+  static const String credentials = 'CREDENTIALS';
+  static const String registrantWorksheetName = 'REGISTRANTS_WORKSHEET_NAME';
 
   // -- FIREBASE Texts
   static const String userDoc = "Users";
