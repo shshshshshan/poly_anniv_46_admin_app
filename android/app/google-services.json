@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "760013082434",
+    "project_id": "anniv46th",
+    "storage_bucket": "anniv46th.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760013082434:android:6a7ee5d7d33c72436cc2db",
+        "android_client_info": {
+          "package_name": "com.polyphonicsapps.preregistration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "760013082434-fji40o984h5867o37lqbk1jar9dv8907.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.polyphonicsapps.preregistration",
+            "certificate_hash": "06407ffa8f9cb807325d2a55df92ee447ca85027"
+          }
+        },
+        {
+          "client_id": "760013082434-sch1nb5a7i51umu5ejh98u33toj10hee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeDXUiq1r17plTVnaWE2NDrfZzKPOMGMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "760013082434-s2mb79al09ci1gb876ukd6curfds7l12.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "760013082434-aq0q9hprqd98s7j34s1hh69jh0ot49hb.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.anniv46AdminApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
