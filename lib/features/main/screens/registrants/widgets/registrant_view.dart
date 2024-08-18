@@ -81,8 +81,8 @@ class RegistrantViewState extends State<RegistrantView> {
               MainProfileMenu(
                   icon: null,
                   title: MainTexts.gender,
-                  value: widget.registrant.gender.titleName,
-                  textColor: widget.registrant.gender.color),
+                  value: widget.registrant.gender!.titleName,
+                  textColor: widget.registrant.gender!.color),
               MainProfileMenu(
                   icon: null,
                   title: MainTexts.batch,
@@ -94,7 +94,7 @@ class RegistrantViewState extends State<RegistrantView> {
               MainProfileMenu(
                   icon: null,
                   title: MainTexts.modePayment,
-                  value: widget.registrant.modeOfPayment.name),
+                  value: widget.registrant.modeOfPayment!.name),
               MainProfileMenu(
                   icon: Iconsax.copy,
                   onPressed: () {
@@ -126,10 +126,10 @@ class RegistrantViewState extends State<RegistrantView> {
                   title: MainTexts.partialPayment,
                   value: widget.registrant.isPartialPayment),
               MainProfileMenu(
-                  onPressed: () => Get.to(() => PaymentStatusEdit(status: widget.registrant.paymentStatus)),
+                  onPressed: () => Get.to(() => PaymentStatusEdit(registrant: widget.registrant)),
                   title: MainTexts.paymentStatus,
-                  value: widget.registrant.paymentStatus.name,
-                  textColor: widget.registrant.paymentStatus.color),
+                  value: widget.registrant.paymentStatus!.name,
+                  textColor: widget.registrant.paymentStatus!.color),
               const SizedBox(height: MainSizes.sectionGap * 2),
               MainLabel(
                   labelText: 'Register Time: ${widget.registrant.timestamp}'),
