@@ -4,6 +4,7 @@ import 'package:anniv_46_admin_app/common/widgets/tooltip/tooltip.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/registrants/main_scroll.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/registrants/refresh_indicator.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/registrants/registrant_controller.dart';
+import 'package:anniv_46_admin_app/features/main/models/registrants/registrant.dart';
 import 'package:anniv_46_admin_app/features/main/screens/registrants/widgets/registrant_card.dart';
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';
 import 'package:anniv_46_admin_app/utils/constants/sizes.dart';
@@ -65,7 +66,7 @@ class MainRegistrants extends StatelessWidget {
               const SizedBox(height: MainSizes.sectionGap),
 
               Column(
-                children: registrantController.registrants.map((registrant) => RegistrantCard(registrant: registrant)).toList(),
+                children: registrantController.registrants.map((registrant) => RegistrantCard(registrant: registrant ?? Registrant.empty())).toList(),
               )
             ],
           ),

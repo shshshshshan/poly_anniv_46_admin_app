@@ -31,8 +31,8 @@ class RegistrantCard extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                  child: Icon(registrant.gender.iconData,
-                      color: registrant.gender.color)),
+                  child: Icon(registrant.gender!.iconData,
+                      color: registrant.gender!.color)),
               Expanded(
                   flex: 4,
                   child: Padding(
@@ -46,7 +46,7 @@ class RegistrantCard extends StatelessWidget {
                                 style: Theme.of(context)
                                     .textTheme
                                     .headlineSmall!
-                                    .apply(color: registrant.gender.color)),
+                                    .apply(color: registrant.gender!.color)),
                             Text.rich(TextSpan(
                                 text: '${MainTexts.paymentStatus}: ',
                                 style: Theme.of(context)
@@ -55,13 +55,13 @@ class RegistrantCard extends StatelessWidget {
                                     .apply(color: MainColors.darkGrey),
                                 children: [
                                   TextSpan(
-                                      text: registrant.paymentStatus.name,
+                                      text: registrant.paymentStatus!.name,
                                       style: Theme.of(context)
                                           .textTheme
                                           .labelLarge!
                                           .apply(
                                               color: registrant
-                                                  .paymentStatus.color,
+                                                  .paymentStatus!.color,
                                               fontStyle: FontStyle.italic))
                                 ]))
                           ]))),

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class RegistrantController extends GetxController {
   static RegistrantController get instance => Get.find();
 
-  final registrants = <Registrant>[].obs;
+  final registrants = <Registrant?>[].obs;
 
   int get totalRegistrants => registrants.length;
 
