@@ -51,7 +51,7 @@ class MainRegistrants extends StatelessWidget {
           animSpeedFactor: 3.0,
           height: 100.0,
           onRefresh: () async {
-            return Future<void>.delayed(const Duration(seconds: 3));
+            registrantController.fetchRegistrants();
           },
           child: ListView(
             physics: const AlwaysScrollableScrollPhysics(),
@@ -65,8 +65,10 @@ class MainRegistrants extends StatelessWidget {
 
               const SizedBox(height: MainSizes.sectionGap),
 
-              Column(
-                children: registrantController.registrants.map((registrant) => RegistrantCard(registrant: registrant ?? Registrant.empty())).toList(),
+              Obx(
+                () => Column(
+                  children: registrantController.registrants.map((registrant) => RegistrantCard(registrant: registrant ?? Registrant.empty())).toList(),
+                ),
               )
             ],
           ),
