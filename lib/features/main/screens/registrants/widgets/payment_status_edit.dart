@@ -1,11 +1,14 @@
 import 'package:anniv_46_admin_app/common/widgets/appbar/appbar.dart';
 import 'package:anniv_46_admin_app/common/widgets/loaders/loaders.dart';
 import 'package:anniv_46_admin_app/data/services/registrants_sheets_api.dart';
+import 'package:anniv_46_admin_app/features/main/controllers/registrants/registrant_controller.dart';
 import 'package:anniv_46_admin_app/features/main/models/registrants/registrant.dart';
 import 'package:anniv_46_admin_app/utils/constants/enums.dart';
+import 'package:anniv_46_admin_app/utils/constants/image_strings.dart';
 import 'package:anniv_46_admin_app/utils/constants/sizes.dart';
 import 'package:anniv_46_admin_app/utils/constants/texts.dart';
 import 'package:anniv_46_admin_app/utils/device/device_utility.dart';
+import 'package:anniv_46_admin_app/utils/popups/full_screen_loader.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -111,6 +114,14 @@ class PaymentStatusEditState extends State<PaymentStatusEdit> {
                   }
 
                   if (updated) {
+                    MainFullScreenLoader.openLoadingDialog(
+                        'Saving...', MainImages.loadingIllustration);
+
+                    await RegistrantController.instance.fetchRegistrants();
+
+                    MainFullScreenLoader.stopLoading();
+
+                    Get.back();
                     Get.back();
 
                     MainLoaders.successSnackbar(
