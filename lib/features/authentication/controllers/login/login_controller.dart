@@ -35,9 +35,9 @@ class LoginController extends GetxController {
     try {
       MainFullScreenLoader.openLoadingDialog(
           'Signing you out...', MainImages.loadingIllustration);
-      userController.user(UserModel.empty());
       await AuthenticationRepository.instance.auth.signOut();
       await GoogleSignIn().signOut();
+      userController.user(UserModel.empty());
 
       MainFullScreenLoaderGif.openLoadingDialog('Success!',
           'You are now logged out!', MainImages.loginSuccessIllustration);
