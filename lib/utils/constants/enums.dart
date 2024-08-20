@@ -83,3 +83,8 @@ extension ModeOfPaymentExtension on ModeOfPayment {
     return ["G-Cash", "Pay Upon Arrival"][index];
   }
 }
+
+enum ContentLineType {
+  twoLines,
+  threeLines,
+}
