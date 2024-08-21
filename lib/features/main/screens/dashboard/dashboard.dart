@@ -1,9 +1,12 @@
 import 'package:anniv_46_admin_app/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:anniv_46_admin_app/common/widgets/texts/section_heading.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/dashboard/main_scroll.dart';
+import 'package:anniv_46_admin_app/features/main/controllers/dashboard/payment_stats_controller.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/dashboard/refresh_indicator.dart';
+import 'package:anniv_46_admin_app/features/main/controllers/registrants/registrant_controller.dart';
 import 'package:anniv_46_admin_app/features/main/screens/dashboard/widgets/home_app_bar.dart';
 import 'package:anniv_46_admin_app/features/main/screens/dashboard/widgets/payment_stats.dart';
+import 'package:anniv_46_admin_app/features/main/screens/dashboard/widgets/recent_payments.dart';
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';
 import 'package:anniv_46_admin_app/utils/constants/sizes.dart';
 import 'package:anniv_46_admin_app/utils/helpers/helper_functions.dart';
@@ -28,9 +31,7 @@ class MainDashboard extends StatelessWidget {
         showChildOpacityTransition: false,
         color: MainColors.primary,
         animSpeedFactor: 3.0,
-        onRefresh: () async {
-          return Future<void>.delayed(const Duration(seconds: 3));
-        },
+        onRefresh: () => refreshIndicatorController.onRefresh(),
         child: ListView(
           controller: scrollController.controller,
           physics: const AlwaysScrollableScrollPhysics(),
@@ -65,7 +66,8 @@ class MainDashboard extends StatelessWidget {
                         title: 'Recent Payments', showActionButton: false),
                   ]),
                 ),
-                const SizedBox(height: MainSizes.sectionGap)
+                const SizedBox(height: MainSizes.sectionGap),
+                const RecentPayments(),
               ],
             )
           ],
