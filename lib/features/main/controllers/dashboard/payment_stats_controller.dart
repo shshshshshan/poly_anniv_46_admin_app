@@ -33,7 +33,7 @@ class PaymentStatsController extends GetxController {
   updateVerifiedPaymentsCount() {
     verifiedPayments.value = 0;
     for (Registrant? registrant in registrantController.registrants) {
-      if (registrant?.paymentStatus != null && registrant?.paymentStatus != PaymentStatus.pending) {
+      if (registrant?.paymentStatus == PaymentStatus.successful) {
         verifiedPayments.value++;
       }
     }
