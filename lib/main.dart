@@ -19,7 +19,6 @@ Future<void> main() async {
   await dotenv.load(fileName: MainTexts.dotenvFile);
 
   await RegistrantsSheetsApi.init();
-  Get.put(RegistrantController());
 
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
