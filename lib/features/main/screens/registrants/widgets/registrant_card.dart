@@ -9,22 +9,27 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class RegistrantCard extends StatelessWidget {
-  const RegistrantCard({
-    super.key,
-    required this.registrant,
-  });
+  const RegistrantCard(
+      {super.key, required this.registrant, this.clickable = true});
 
   final Registrant registrant;
+  final bool clickable;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
+        if (!clickable) return;
+
         await Future.delayed(const Duration(milliseconds: 135));
         Get.to(() => RegistrantView(registrant: registrant));
       },
-      onLongPress: () => MainLoaders.successSnackbar(
-          message: 'Tap for more information.', title: 'Tooltip'),
+      onLongPress: () {
+        if (!clickable) return;
+
+        MainLoaders.successSnackbar(
+            message: 'Tap for more information.', title: 'Tooltip');
+      },
       child: Card(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: MainSizes.sm),
