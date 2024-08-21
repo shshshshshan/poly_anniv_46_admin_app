@@ -1,10 +1,7 @@
-import 'package:anniv_46_admin_app/common/widgets/placeholders/banner_placeholder.dart';
 import 'package:anniv_46_admin_app/common/widgets/placeholders/card_placeholder.dart';
-import 'package:anniv_46_admin_app/common/widgets/placeholders/title_placeholder.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/dashboard/payment_stats_controller.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/registrants/registrant_controller.dart';
 import 'package:anniv_46_admin_app/features/main/models/registrants/registrant.dart';
-import 'package:anniv_46_admin_app/features/main/screens/dashboard/widgets/payment_stats.dart';
 import 'package:anniv_46_admin_app/features/main/screens/registrants/widgets/registrant_card.dart';
 import 'package:anniv_46_admin_app/utils/constants/colors.dart';
 import 'package:anniv_46_admin_app/utils/constants/sizes.dart';

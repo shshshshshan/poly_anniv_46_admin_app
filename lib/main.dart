@@ -1,7 +1,6 @@
 import 'package:anniv_46_admin_app/app.dart';
 import 'package:anniv_46_admin_app/data/repositories/authentication_repo.dart';
 import 'package:anniv_46_admin_app/data/services/registrants_sheets_api.dart';
-import 'package:anniv_46_admin_app/features/main/controllers/registrants/registrant_controller.dart';
 import 'package:anniv_46_admin_app/firebase_options.dart';
 import 'package:anniv_46_admin_app/utils/constants/texts.dart';
 import 'package:firebase_core/firebase_core.dart';
