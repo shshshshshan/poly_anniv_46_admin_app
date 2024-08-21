@@ -1,6 +1,7 @@
 import 'package:anniv_46_admin_app/common/widgets/appbar/appbar.dart';
 import 'package:anniv_46_admin_app/common/widgets/loaders/loaders.dart';
 import 'package:anniv_46_admin_app/data/services/registrants_sheets_api.dart';
+import 'package:anniv_46_admin_app/features/main/controllers/dashboard/payment_stats_controller.dart';
 import 'package:anniv_46_admin_app/features/main/controllers/registrants/registrant_controller.dart';
 import 'package:anniv_46_admin_app/features/main/models/registrants/registrant.dart';
 import 'package:anniv_46_admin_app/utils/constants/enums.dart';
@@ -118,6 +119,7 @@ class PaymentStatusEditState extends State<PaymentStatusEdit> {
                         'Saving...', MainImages.loadingIllustration);
 
                     await RegistrantController.instance.fetchRegistrants();
+                    PaymentStatsController.instance.updateAll();
 
                     MainFullScreenLoader.stopLoading();
 
